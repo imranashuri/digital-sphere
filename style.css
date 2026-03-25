@@ -1,0 +1,83 @@
+/* General */
+body {
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+.container, .dashboard-container {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+}
+.form, .task-section {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+button:hover {
+  background: #2563eb;
+}
+.hidden { display: none; }
+span { cursor: pointer; color: #38bdf8; }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.filter-buttons button {
+  flex: 1;
+  margin: 0 2px;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Light mode */
+body.light {
+  background: #f0f0f0;
+  color: #111;
+}
+body.light .container, body.light .dashboard-container {
+  background: #fff;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-container, .container { width: 90%; padding: 20px; }
+  .stats { flex-direction: column; gap: 5px; }
+  .filter-buttons { flex-direction: column; }
+}
